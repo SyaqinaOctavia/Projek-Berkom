@@ -99,7 +99,6 @@ while (lanjut == True):
             data_id_eToll.append(id_eToll)
             save_masuk.append(masuk)
             count += 1
-        print(data_id_eToll)
         tanya = str(input("Mau lanjut/tidak? "))
         if(tanya == "tidak"):
             lanjut = False
