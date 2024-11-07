@@ -103,8 +103,7 @@ while (lanjut == True):
         tanya = str(input("Mau lanjut/tidak? "))
         if(tanya == "tidak"):
             lanjut = False
-            print("Yay programnya berhasil :D")
-
+            
     elif(status == 'keluar'):
         #~~Gerbang Keluar~~#
         id_eToll = int(input("Masukkan 5 digit ID e-Toll : "))
@@ -147,4 +146,3 @@ while (lanjut == True):
         tanya = str(input("Mau lanjut/tidak? "))
         if(tanya == "tidak"):
             lanjut = False
-            print("Yay programnya berhasil :D")
