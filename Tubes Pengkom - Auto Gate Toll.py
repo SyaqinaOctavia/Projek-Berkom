@@ -95,7 +95,6 @@ while (lanjut == True):
                 save_masuk[i] = masuk
                 cek = True
             i += 1
-            print(count, cek)
         if(cek == False):
             data_id_eToll.append(id_eToll)
             save_masuk.append(masuk)
