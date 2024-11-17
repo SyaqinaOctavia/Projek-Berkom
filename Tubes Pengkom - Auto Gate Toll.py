@@ -82,7 +82,7 @@ while (lanjut == True):
     status = input("Mau masuk/keluar tol? ")
 
     if(status == 'masuk'):
-        #~~Gerbang Masuk~~#
+        #~~~Gerbang Masuk~~~#
         '''pengendara akan tap kartu eToll, mesin akan menyimpan data id eToll tersebut, 
         dan di gerbang mana kartu tersebut ditap'''
         id_eToll = int(input("Masukkan 5 digit ID e-Toll : "))
@@ -106,12 +106,12 @@ while (lanjut == True):
             lanjut = False
             
     elif(status == 'keluar'):
-        #~~Gerbang Keluar~~#
+        #~~~Gerbang Keluar~~~#
         id_eToll = int(input("Masukkan 5 digit ID e-Toll : "))
         i = 0
         cek = False
         while (i<=count and cek == False):
-            #cek data id eToll, apakah kartu tersebut digunakan untuk tap masuk?
+            # cek data id eToll, apakah kartu tersebut digunakan untuk tap masuk?
             if(data_id_eToll[i] == id_eToll):
                 saldo = int(input("Masukkan nominal saldo anda : "))
                 gerbang_keluar = input("Keluar di gerbang mana? : ")
@@ -131,7 +131,7 @@ while (lanjut == True):
                 id_eToll = int(input("Masukkan 5 digit ID e-Toll : "))            
                 i = 0 #pengendara harus menggunakan kartu lain, i kembali menjadi 0, loop untuk cek id eToll akan diulang kembali
         total_harga = tarif_per_km * abs(km_keluar-km_masuk) * tarif_golongan[golongan]
-        #untuk menghitung harga yang harus dibayar digunakan absolut karena diasumsikan di setiap tempat ada gerbang masuk dan keluar
+        # untuk menghitung harga yang harus dibayar digunakan absolut karena diasumsikan di setiap tempat ada gerbang masuk dan keluar
 
         if(saldo < total_harga):
             while(saldo < total_harga): 
@@ -143,7 +143,7 @@ while (lanjut == True):
             print("Silakan melanjutkan perjalanan :D")
             print("Sisa saldo anda Rp" + str(saldo - total_harga))
             
-            #~~~~hapus data id dan gerbang yang tersimpan~~~~#
+            # hapus data id dan gerbang yang tersimpan
             data_id_eToll[i-1] = 0
             save_masuk[i-1] = '0'
         
