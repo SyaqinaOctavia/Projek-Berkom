@@ -6,7 +6,7 @@ dan golongan kendaraan yang dimiliki.
 
 Algoritma ini dibuat semirip mungkin dengan gerbang tol yang sebenarnya, yang bisa dilalui oleh banyak kendaraan.
 Sehingga algoritma ini bisa menginput sebanyak mungkin data kendaraan yang masuk, dan menyimpan data tersebut 
-agak kendaraan bisa keluar di gerbang keluar
+agar kendaraan bisa keluar di gerbang keluar
 '''
 
 #~~~~~~~KAMUS~~~~~~~#
