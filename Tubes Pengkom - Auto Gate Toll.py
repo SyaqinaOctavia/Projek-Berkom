@@ -16,7 +16,7 @@ data_id_eToll : array Integer -> menyimpan data id eToll yang telah digunakan un
 save_masuk : array string -> menyimpan data gerbang masuk dari kendaraan, indeks disesuaikan dengan data_id_eToll
 data_gerbang : array string -> ada gerbang 'A', 'B', 'C', 'D', 'E'
 km_gerbang : array integer -> letak kilometer dari setiap gerbang, indeks disesuaikan dengan data_gerbang
-tarif_golongan : array integer -> perbandingan harga tiap golongan, dengan golongan 1 menjadi acuan
+tarif_golongan : array float -> perbandingan harga tiap golongan, dengan golongan 1 menjadi acuan
 tarif_per_km : integer -> harga per kilometer
 
 *~~Variabel Sementara~~*
@@ -130,7 +130,7 @@ while (lanjut == True):
                 print("Kartu tidak bisa digunakan")
                 id_eToll = int(input("Masukkan 5 digit ID e-Toll : "))            
                 i = 0 #pengendara harus menggunakan kartu lain, i kembali menjadi 0, loop untuk cek id eToll akan diulang kembali
-        total_harga = tarif_per_km * abs(km_keluar-km_masuk) * tarif_golongan[golongan]
+        total_harga = int(tarif_per_km * abs(km_keluar-km_masuk) * tarif_golongan[golongan])
         # untuk menghitung harga yang harus dibayar digunakan absolut karena diasumsikan di setiap tempat ada gerbang masuk dan keluar
 
         if(saldo < total_harga):
